@@ -1,4 +1,6 @@
-require_relative "book_in_stock"
+# frozen_string_literal: true
+
+require_relative 'book_in_stock'
 
 b1 = BookInStock.new('isbn1', 3)
 puts b1.price
