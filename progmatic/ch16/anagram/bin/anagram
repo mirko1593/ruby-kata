@@ -1,0 +1,6 @@
+#! /Users/mirkowang/.rbenv/shims/ruby
+
+require 'anagram/runner'
+
+runner = Anagram::Runner.new(ARGV)
+runner.run
