@@ -28,8 +28,8 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
-        # format.html { redirect_to store_index_url }
-        format.turbo_stream
+        format.turbo_stream { @current_item = @line_item }
+        format.html { redirect_to store_index_url }
         # make user of HTML template
         # do
         #   render turbo_stream: turbo_stream.replace(
