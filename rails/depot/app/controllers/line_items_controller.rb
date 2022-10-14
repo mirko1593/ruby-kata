@@ -28,7 +28,16 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to store_index_url }
+        # format.html { redirect_to store_index_url }
+        format.turbo_stream
+        # make user of HTML template
+        # do
+        #   render turbo_stream: turbo_stream.replace(
+        #     :cart,
+        #     partial: 'layouts/cart',
+        #     locals: { cart: @cart }
+        #   )
+        # end
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new, status: :unprocessable_entity }
