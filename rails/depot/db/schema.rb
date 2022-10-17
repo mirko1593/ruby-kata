@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_15_092305) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_16_163226) do
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -29,12 +29,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_15_092305) do
   end
 
   create_table "orders", force: :cascade do |t|
+    t.string "name"
     t.text "address"
     t.string "email"
     t.integer "pay_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
   end
 
   create_table "products", force: :cascade do |t|
