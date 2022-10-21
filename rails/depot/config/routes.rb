@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'upload/get'
+  post 'upload/save'
+  get 'upload/show/:id' => 'upload#show'
+  get 'upload/picture/:id' => 'upload#picture'
   get 'admin' => 'admin#index'
   controller :sessions do
     get 'login' => :new

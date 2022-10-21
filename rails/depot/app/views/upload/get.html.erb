@@ -1,0 +1,16 @@
+<%= form_for(:picture, url: {action: 'save'}, html: {multipart: true}) do |form| %>
+  <div class="mt-5">
+    <%= form.label :comment %>
+    <%= form.text_field :comment, class: "input-field" %>
+  </div>
+
+  <div class="mt-5">
+    <%= form.label :uploaded_picture, 'Upload Your Picture' %>
+    <%= form.file_field :uploaded_picture, class: "input-field" %>
+  </div>
+
+
+  <br>
+  
+  <%= submit_tag "Upload File", class: "rounded-lg py-1 px-2 text-white bg-green-600" %>
+<% end %>

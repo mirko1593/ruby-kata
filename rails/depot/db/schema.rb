@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_18_162607) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_20_090103) do
   create_table "action_mailbox_inbound_emails", force: :cascade do |t|
     t.integer "status", default: 0, null: false
     t.string "message_id", null: false
@@ -76,10 +76,19 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_18_162607) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.string "name"
     t.text "address"
     t.string "email"
     t.integer "pay_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+  end
+
+  create_table "pictures", force: :cascade do |t|
+    t.string "comment"
+    t.string "name"
+    t.string "content_type"
+    t.binary "data", limit: 1048576
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
