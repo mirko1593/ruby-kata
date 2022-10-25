@@ -1,0 +1,3 @@
+about_constants.rb:L79
+Q: constance precendence in lexical scape of inheritance
+
