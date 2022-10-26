@@ -1,3 +1,5 @@
 about_constants.rb:L79
 Q: constance precendence in lexical scape of inheritance
+about_inheritance.rb:L74
+Q: how call parent method with super raise a NoMethodError
 
